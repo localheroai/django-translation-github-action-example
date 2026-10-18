@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "projectId": "your-project-id",
+  "sourceLocale": "en",
+  "outputLocales": ["sv", "pl", "ar"],
+  "translationFiles": {
+    "paths": ["locale/"],
+    "pattern": "**/*.{po,pot}",
+    "workflow": "django"
+  }
+}

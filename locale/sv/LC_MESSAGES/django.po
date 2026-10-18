@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: django-translation-github-action-example\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-10-18 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: teams/templates/teams/team_settings.html:6
+#: teams/templates/teams/team_settings.html:26
+msgid "Team settings"
+msgstr "Teaminställningar"
+
+#: teams/templates/teams/team_settings.html:19
+msgid "Language"
+msgstr "Språk"
+
+#: teams/templates/teams/team_settings.html:27
+#, python-format
+msgid "Manage who can access %(team)s and what they can do."
+msgstr "Hantera vem som har åtkomst till %(team)s och vad de kan göra."
+
+#: teams/templates/teams/team_settings.html:32
+msgid "Team name"
+msgstr "Teamnamn"
+
+#: teams/templates/teams/team_settings.html:34
+msgid "Save changes"
+msgstr "Spara ändringar"
+
+#: teams/templates/teams/team_settings.html:39
+msgid "Members"
+msgstr "Medlemmar"
+
+#: teams/templates/teams/team_settings.html:40
+#, python-format
+msgid "%(counter)s member"
+msgid_plural "%(counter)s members"
+msgstr[0] "%(counter)s medlem"
+msgstr[1] "%(counter)s medlemmar"
+
+#: teams/templates/teams/team_settings.html:48
+msgid "Remove"
+msgstr "Ta bort"
+
+#: teams/templates/teams/team_settings.html:55
+msgid "Invite a teammate"
+msgstr "Bjud in en kollega"
+
+#: teams/templates/teams/team_settings.html:57
+msgid "Email address"
+msgstr "E-postadress"
+
+#: teams/templates/teams/team_settings.html:59
+msgid "Role"
+msgstr "Roll"
+
+#: teams/templates/teams/team_settings.html:65
+msgid "Send invite"
+msgstr "Skicka inbjudan"
+
+#: teams/views.py:6
+msgid "Admin"
+msgstr "Administratör"
+
+#: teams/views.py:7
+msgid "Member"
+msgstr "Medlem"
+
+#: teams/views.py:22
+#, python-format
+msgid "%(count)s seat left on your plan."
+msgid_plural "%(count)s seats left on your plan."
+msgstr[0] "%(count)s plats kvar i din plan."
+msgstr[1] "%(count)s platser kvar i din plan."
+
+#: teams/views.py:32
+#, python-format
+msgid "Signed in as %(name)s"
+msgstr "Inloggad som %(name)s"

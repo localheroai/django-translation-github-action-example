@@ -1,0 +1,70 @@
+{% load i18n %}{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}{% get_available_languages as LANGUAGES %}{% get_language_info_list for LANGUAGES as languages %}<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% translate "Team settings" %}</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; color: #1f2328; }
+    nav { display: flex; gap: 1rem; font-size: 0.9rem; }
+    nav a[aria-current] { font-weight: 600; }
+    section { border-top: 1px solid #d0d7de; margin-top: 2rem; padding-top: 1rem; }
+    label { display: block; margin-top: 0.75rem; font-weight: 600; }
+    ul { list-style: none; padding: 0; }
+    li { display: flex; gap: 1rem; align-items: center; padding: 0.5rem 0; }
+    .muted { color: #59636e; }
+  </style>
+</head>
+<body>
+  <nav aria-label="{% translate "Language" %}">
+    {% for language in languages %}
+      <a href="{% language language.code %}{% url 'team_settings' %}{% endlanguage %}" lang="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} aria-current="page"{% endif %}>{{ language.name_local }}</a>
+    {% endfor %}
+  </nav>
+
+  <main>
+    <h1>{% translate "Team settings" %}</h1>
+    <p>{% blocktranslate with team=team_name %}Manage who can access {{ team }} and what they can do.{% endblocktranslate %}</p>
+    <p class="muted">{{ signed_in_as }}</p>
+
+    <section>
+      <form>
+        <label for="team-name">{% translate "Team name" %}</label>
+        <input id="team-name" name="team_name" value="{{ team_name }}">
+        <button type="submit">{% translate "Save changes" %}</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>{% translate "Members" %}</h2>
+      <p class="muted">{% blocktranslate count counter=members|length %}{{ counter }} member{% plural %}{{ counter }} members{% endblocktranslate %}</p>
+      <p class="muted">{{ seats_left }}</p>
+      <ul>
+        {% for member in members %}
+          <li>
+            <span>{{ member.name }}</span>
+            <span class="muted">{{ member.email }}</span>
+            <span>{{ member.role_label }}</span>
+            <button type="button">{% translate "Remove" %}</button>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section>
+      <h2>{% translate "Invite a teammate" %}</h2>
+      <form>
+        <label for="invite-email">{% translate "Email address" %}</label>
+        <input type="email" id="invite-email" name="email">
+        <label for="invite-role">{% translate "Role" %}</label>
+        <select id="invite-role" name="role">
+          {% for value, label in roles %}
+            <option value="{{ value }}">{{ label }}</option>
+          {% endfor %}
+        </select>
+        <button type="submit">{% translate "Send invite" %}</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

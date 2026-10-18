@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: django-translation-github-action-example\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-10-18 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: teams/templates/teams/team_settings.html:6
+#: teams/templates/teams/team_settings.html:26
+msgid "Team settings"
+msgstr "إعدادات الفريق"
+
+#: teams/templates/teams/team_settings.html:19
+msgid "Language"
+msgstr "اللغة"
+
+#: teams/templates/teams/team_settings.html:27
+#, python-format
+msgid "Manage who can access %(team)s and what they can do."
+msgstr "حدّد من يمكنه الوصول إلى %(team)s وما يمكنه القيام به."
+
+#: teams/templates/teams/team_settings.html:32
+msgid "Team name"
+msgstr "اسم الفريق"
+
+#: teams/templates/teams/team_settings.html:34
+msgid "Save changes"
+msgstr "حفظ التغييرات"
+
+#: teams/templates/teams/team_settings.html:39
+msgid "Members"
+msgstr "الأعضاء"
+
+#: teams/templates/teams/team_settings.html:40
+#, python-format
+msgid "%(counter)s member"
+msgid_plural "%(counter)s members"
+msgstr[0] "لا يوجد أعضاء"
+msgstr[1] "عضو واحد"
+msgstr[2] "عضوان"
+msgstr[3] "%(counter)s أعضاء"
+msgstr[4] "%(counter)s عضوًا"
+msgstr[5] "%(counter)s عضو"
+
+#: teams/templates/teams/team_settings.html:48
+msgid "Remove"
+msgstr "إزالة"
+
+#: teams/templates/teams/team_settings.html:55
+msgid "Invite a teammate"
+msgstr "دعوة زميل"
+
+#: teams/templates/teams/team_settings.html:57
+msgid "Email address"
+msgstr "البريد الإلكتروني"
+
+#: teams/templates/teams/team_settings.html:59
+msgid "Role"
+msgstr "الدور"
+
+#: teams/templates/teams/team_settings.html:65
+msgid "Send invite"
+msgstr "إرسال الدعوة"
+
+#: teams/views.py:6
+msgid "Admin"
+msgstr "مسؤول"
+
+#: teams/views.py:7
+msgid "Member"
+msgstr "عضو"
+
+#: teams/views.py:22
+#, python-format
+msgid "%(count)s seat left on your plan."
+msgid_plural "%(count)s seats left on your plan."
+msgstr[0] "لا توجد مقاعد متبقية في خطتك."
+msgstr[1] "يتبقى مقعد واحد في خطتك."
+msgstr[2] "يتبقى مقعدان في خطتك."
+msgstr[3] "يتبقى %(count)s مقاعد في خطتك."
+msgstr[4] "يتبقى %(count)s مقعدًا في خطتك."
+msgstr[5] "يتبقى %(count)s مقعد في خطتك."
+
+#: teams/views.py:32
+#, python-format
+msgid "Signed in as %(name)s"
+msgstr "تم تسجيل الدخول باسم %(name)s"

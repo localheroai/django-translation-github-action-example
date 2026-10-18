@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: teams/templates/teams/team_settings.html:6
+#: teams/templates/teams/team_settings.html:26
+msgid "Team settings"
+msgstr ""
+
+#: teams/templates/teams/team_settings.html:19
+msgid "Language"
+msgstr ""
+
+#: teams/templates/teams/team_settings.html:27
+#, python-format
+msgid "Manage who can access %(team)s and what they can do."
+msgstr ""
+
+#: teams/templates/teams/team_settings.html:32
+msgid "Team name"
+msgstr ""
+
+#: teams/templates/teams/team_settings.html:34
+msgid "Save changes"
+msgstr ""
+
+#: teams/templates/teams/team_settings.html:39
+msgid "Members"
+msgstr ""
+
+#: teams/templates/teams/team_settings.html:40
+#, python-format
+msgid "%(counter)s member"
+msgid_plural "%(counter)s members"
+msgstr[0] ""
+msgstr[1] ""
+
+#: teams/templates/teams/team_settings.html:48
+msgid "Remove"
+msgstr ""
+
+#: teams/templates/teams/team_settings.html:55
+msgid "Invite a teammate"
+msgstr ""
+
+#: teams/templates/teams/team_settings.html:57
+msgid "Email address"
+msgstr ""
+
+#: teams/templates/teams/team_settings.html:59
+msgid "Role"
+msgstr ""
+
+#: teams/templates/teams/team_settings.html:65
+msgid "Send invite"
+msgstr ""
+
+#: teams/views.py:6
+msgid "Admin"
+msgstr ""
+
+#: teams/views.py:7
+msgid "Member"
+msgstr ""
+
+#: teams/views.py:22
+#, python-format
+msgid "%(count)s seat left on your plan."
+msgid_plural "%(count)s seats left on your plan."
+msgstr[0] ""
+msgstr[1] ""
+
+#: teams/views.py:32
+#, python-format
+msgid "Signed in as %(name)s"
+msgstr ""

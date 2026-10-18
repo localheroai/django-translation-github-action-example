@@ -1,0 +1,52 @@
+name: Localhero.ai - Automatic I18n translation
+
+on:
+  pull_request:
+    paths:
+      - "locale/**"
+      - "**/*.py"
+      - "**/*.html"
+      - "**/*.txt"
+      - "localhero.json"
+  repository_dispatch:
+    types: [localhero-sync]
+  workflow_dispatch:
+
+concurrency:
+  group: translate-${{ github.event.client_payload.branch || github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.client_payload.branch || github.head_ref || github.ref_name }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        if: github.event_name == 'pull_request' && github.actor != 'localhero-ai[bot]'
+        with:
+          python-version: "3.12"
+
+      - name: Extract messages
+        if: github.event_name == 'pull_request' && github.actor != 'localhero-ai[bot]'
+        run: |
+          sudo apt-get install -y -qq gettext
+          pip install -r requirements.txt
+          python manage.py makemessages --keep-pot -l sv -l pl -l ar
+
+          # Optional: makemessages rewrites the creation-date header on every run,
+          # so without this line every CI run shows a one-line diff in every catalog.
+          git ls-files --modified --others --exclude-standard -z -- '*.po' '*.pot' | xargs -0 -r sed -i '/^"POT-Creation-Date: /d' --
+
+      - name: Translate
+        uses: localheroai/localhero-action@v1
+        with:
+          api-key: ${{ secrets.LOCALHERO_API_KEY }}
