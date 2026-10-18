@@ -76,10 +76,10 @@ msgstr "Medlem"
 #, python-format
 msgid "%(count)s seat left on your plan."
 msgid_plural "%(count)s seats left on your plan."
-msgstr[0] "%(count)s plats kvar i din plan."
-msgstr[1] "%(count)s platser kvar i din plan."
+msgstr[0] "%(count)s plats kvar i ditt abonnemang."
+msgstr[1] "%(count)s platser kvar i ditt abonnemang."
 
-#: teams/views.py:32
+#: teams/views.py:36
 #, python-format
 msgid "Signed in as %(name)s"
 msgstr "Inloggad som %(name)s"

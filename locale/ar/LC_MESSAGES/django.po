@@ -88,7 +88,7 @@ msgstr[3] "يتبقى %(count)s مقاعد في خطتك."
 msgstr[4] "يتبقى %(count)s مقعدًا في خطتك."
 msgstr[5] "يتبقى %(count)s مقعد في خطتك."
 
-#: teams/views.py:32
+#: teams/views.py:36
 #, python-format
 msgid "Signed in as %(name)s"
 msgstr "تم تسجيل الدخول باسم %(name)s"

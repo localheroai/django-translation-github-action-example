@@ -15,7 +15,7 @@ A second workflow, [`ci.yml`](.github/workflows/ci.yml), compiles the catalogs a
 3. Commit `localhero.json`, the workflow and `locale/django.pot`. The `.pot` is your source catalog and belongs in git. `init` offers to create it if you don't have one.
 4. Install the [Localhero.ai GitHub App](https://localhero.ai/docs/github-app). Without it the translation commit is pushed with `GITHUB_TOKEN` and GitHub won't run your CI on it automatically.
 
-The full guide, with uv and Poetry setups and how plurals work, is at [localhero.ai/docs/django](https://localhero.ai/docs/django).
+The full guide, including how `init` handles uv and Poetry and how plurals work, is at [localhero.ai/docs/django](https://localhero.ai/docs/django).
 
 ## What a translation pull request looks like
 
@@ -31,8 +31,10 @@ The action also comments on the pull request with a link to the review page. Whe
 
 ## Run it locally
 
+Django 6.1 needs Python 3.12 or later.
+
 ```bash
-python -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python manage.py compilemessages --ignore .venv

@@ -86,7 +86,7 @@ msgstr[1] "Zostały %(count)s miejsca w Twoim planie."
 msgstr[2] "Zostało %(count)s miejsc w Twoim planie."
 msgstr[3] "Zostało %(count)s miejsca w Twoim planie."
 
-#: teams/views.py:32
+#: teams/views.py:36
 #, python-format
 msgid "Signed in as %(name)s"
 msgstr "Zalogowano jako %(name)s"

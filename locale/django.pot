@@ -85,7 +85,7 @@ msgid_plural "%(count)s seats left on your plan."
 msgstr[0] ""
 msgstr[1] ""
 
-#: teams/views.py:32
+#: teams/views.py:36
 #, python-format
 msgid "Signed in as %(name)s"
 msgstr ""

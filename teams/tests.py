@@ -1,7 +1,7 @@
 from django.test import SimpleTestCase
 from django.utils import translation
 
-from teams.views import seats_left_message
+from teams.views import seats_left_template
 
 TARGET_LANGUAGES = ["sv", "pl", "ar"]
 
@@ -55,15 +55,16 @@ class PluralFormTests(SimpleTestCase):
             for count in counts:
                 with self.subTest(language=language, count=count):
                     with translation.override("en"):
-                        english = seats_left_message(count)
+                        english = seats_left_template(count)
                     with translation.override(language):
-                        translated = seats_left_message(count)
+                        translated = seats_left_template(count)
 
+                    self.assertTrue(translated)
                     self.assertNotEqual(translated, english)
 
     def test_each_plural_form_has_its_own_wording(self):
         for language, counts in PLURAL_SAMPLE_COUNTS.items():
             with self.subTest(language=language), translation.override(language):
-                messages = {seats_left_message(count) for count in counts}
+                templates = {seats_left_template(count) for count in counts}
 
-                self.assertEqual(len(messages), len(counts))
+                self.assertEqual(len(templates), len(counts))

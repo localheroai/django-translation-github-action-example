@@ -17,12 +17,16 @@ MEMBERS = [
 ]
 
 
-def seats_left_message(seats_left):
+def seats_left_template(seats_left):
     return ngettext(
         "%(count)s seat left on your plan.",
         "%(count)s seats left on your plan.",
         seats_left,
-    ) % {"count": seats_left}
+    )
+
+
+def seats_left_message(seats_left):
+    return seats_left_template(seats_left) % {"count": seats_left}
 
 
 def team_settings(request):
