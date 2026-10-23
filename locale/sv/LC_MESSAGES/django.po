@@ -64,6 +64,26 @@ msgstr "Roll"
 msgid "Send invite"
 msgstr "Skicka inbjudan"
 
+#: teams/templates/teams/team_settings.html:67
+#| msgid "Send invite"
+msgid "Pending invites"
+msgstr "Väntande inbjudningar"
+
+#: teams/templates/teams/team_settings.html:68
+#, python-format
+msgid "%(counter)s invite waiting for a reply"
+msgid_plural "%(counter)s invites waiting for a reply"
+msgstr[0] "%(counter)s inbjudan väntar på svar"
+msgstr[1] "%(counter)s inbjudningar väntar på svar"
+
+#: teams/templates/teams/team_settings.html:73
+msgid "Resend"
+msgstr "Skicka igen"
+
+#: teams/templates/teams/team_settings.html:74
+msgid "Revoke"
+msgstr "Återkalla"
+
 #: teams/views.py:6
 msgid "Admin"
 msgstr "Administratör"
@@ -72,14 +92,14 @@ msgstr "Administratör"
 msgid "Member"
 msgstr "Medlem"
 
-#: teams/views.py:22
+#: teams/views.py:24
 #, python-format
 msgid "%(count)s seat left on your plan."
 msgid_plural "%(count)s seats left on your plan."
 msgstr[0] "%(count)s plats kvar i ditt abonnemang."
 msgstr[1] "%(count)s platser kvar i ditt abonnemang."
 
-#: teams/views.py:36
+#: teams/views.py:38
 #, python-format
 msgid "Signed in as %(name)s"
 msgstr "Inloggad som %(name)s"

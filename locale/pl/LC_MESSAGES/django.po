@@ -69,6 +69,28 @@ msgstr "Rola"
 msgid "Send invite"
 msgstr "Wyślij zaproszenie"
 
+#: teams/templates/teams/team_settings.html:67
+#| msgid "Send invite"
+msgid "Pending invites"
+msgstr "Oczekujące zaproszenia"
+
+#: teams/templates/teams/team_settings.html:68
+#, python-format
+msgid "%(counter)s invite waiting for a reply"
+msgid_plural "%(counter)s invites waiting for a reply"
+msgstr[0] "%(counter)s zaproszenie oczekujące na odpowiedź"
+msgstr[1] "%(counter)s zaproszenia oczekujące na odpowiedź"
+msgstr[2] "%(counter)s zaproszeń oczekujących na odpowiedź"
+msgstr[3] "%(counter)s zaproszenia oczekujące na odpowiedź"
+
+#: teams/templates/teams/team_settings.html:73
+msgid "Resend"
+msgstr "Wyślij ponownie"
+
+#: teams/templates/teams/team_settings.html:74
+msgid "Revoke"
+msgstr "Cofnij"
+
 #: teams/views.py:6
 msgid "Admin"
 msgstr "Administrator"
@@ -77,7 +99,7 @@ msgstr "Administrator"
 msgid "Member"
 msgstr "Członek"
 
-#: teams/views.py:22
+#: teams/views.py:24
 #, python-format
 msgid "%(count)s seat left on your plan."
 msgid_plural "%(count)s seats left on your plan."
@@ -86,7 +108,7 @@ msgstr[1] "Zostały %(count)s miejsca w Twoim planie."
 msgstr[2] "Zostało %(count)s miejsc w Twoim planie."
 msgstr[3] "Zostało %(count)s miejsca w Twoim planie."
 
-#: teams/views.py:36
+#: teams/views.py:38
 #, python-format
 msgid "Signed in as %(name)s"
 msgstr "Zalogowano jako %(name)s"
