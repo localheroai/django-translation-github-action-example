@@ -1,11 +1,21 @@
 {
   "schemaVersion": "1.0",
-  "projectId": "your-project-id",
+  "projectId": "django-translation-github-action-example",
   "sourceLocale": "en",
-  "outputLocales": ["sv", "pl", "ar"],
+  "outputLocales": [
+    "sv",
+    "pl",
+    "ar"
+  ],
   "translationFiles": {
-    "paths": ["locale/"],
+    "paths": [
+      "locale/"
+    ],
     "pattern": "**/*.{po,pot}",
+    "ignore": [
+      "**/sources/**"
+    ],
     "workflow": "django"
-  }
+  },
+  "lastSyncedAt": "2026-10-23T09:21:38.902Z"
 }
