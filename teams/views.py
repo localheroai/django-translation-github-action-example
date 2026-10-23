@@ -16,6 +16,8 @@ MEMBERS = [
     {"name": "Layla Haddad", "email": "layla@example.com", "role": "member"},
 ]
 
+PENDING_INVITES = ["alva@example.com", "jonas@example.com"]
+
 
 def seats_left_template(seats_left):
     return ngettext(
@@ -36,6 +38,7 @@ def team_settings(request):
         "signed_in_as": _("Signed in as %(name)s") % {"name": SIGNED_IN_USER},
         "seats_left": seats_left_message(SEATS_ON_PLAN - len(MEMBERS)),
         "members": members,
+        "pending_invites": PENDING_INVITES,
         "roles": ROLES.items(),
     }
     return render(request, "teams/team_settings.html", context)

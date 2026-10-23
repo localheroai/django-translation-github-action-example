@@ -15,6 +15,8 @@ ENGLISH_PAGE_STRINGS = [
     "Email address",
     "Send invite",
     "Save changes",
+    "Pending invites",
+    "2 invites waiting for a reply",
 ]
 
 # One count per plural form the language's Plural-Forms header defines for whole numbers.

@@ -64,6 +64,17 @@
         </select>
         <button type="submit">{% translate "Send invite" %}</button>
       </form>
+      <h3>{% translate "Pending invites" %}</h3>
+      <p class="muted">{% blocktranslate count counter=pending_invites|length %}{{ counter }} invite waiting for a reply{% plural %}{{ counter }} invites waiting for a reply{% endblocktranslate %}</p>
+      <ul>
+        {% for email in pending_invites %}
+          <li>
+            <span class="muted">{{ email }}</span>
+            <button type="button">{% translate "Resend" %}</button>
+            <button type="button">{% translate "Revoke" %}</button>
+          </li>
+        {% endfor %}
+      </ul>
     </section>
   </main>
 </body>
