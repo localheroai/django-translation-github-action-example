@@ -18,6 +18,8 @@ concurrency:
 
 jobs:
   translate:
+    # Pull requests from forks get no secrets, so skip them instead of failing.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -30,7 +32,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         if: github.event_name == 'pull_request' && github.actor != 'localhero-ai[bot]'
         with:
           python-version: "3.12"
