@@ -69,6 +69,30 @@ msgstr "الدور"
 msgid "Send invite"
 msgstr "إرسال الدعوة"
 
+#: teams/templates/teams/team_settings.html:67
+#| msgid "Send invite"
+msgid "Pending invites"
+msgstr "دعوات معلّقة"
+
+#: teams/templates/teams/team_settings.html:68
+#, python-format
+msgid "%(counter)s invite waiting for a reply"
+msgid_plural "%(counter)s invites waiting for a reply"
+msgstr[0] "%(counter)s دعوات بانتظار الرد"
+msgstr[1] "%(counter)s دعوة بانتظار الرد"
+msgstr[2] "%(counter)s من الدعوات بانتظار الرد"
+msgstr[3] "%(counter)s دعوات بانتظار الرد"
+msgstr[4] "%(counter)s دعوةً بانتظار الرد"
+msgstr[5] "%(counter)s دعوة بانتظار الرد"
+
+#: teams/templates/teams/team_settings.html:73
+msgid "Resend"
+msgstr "إعادة الإرسال"
+
+#: teams/templates/teams/team_settings.html:74
+msgid "Revoke"
+msgstr "إلغاء"
+
 #: teams/views.py:6
 msgid "Admin"
 msgstr "مسؤول"
@@ -77,7 +101,7 @@ msgstr "مسؤول"
 msgid "Member"
 msgstr "عضو"
 
-#: teams/views.py:22
+#: teams/views.py:24
 #, python-format
 msgid "%(count)s seat left on your plan."
 msgid_plural "%(count)s seats left on your plan."
@@ -88,7 +112,7 @@ msgstr[3] "يتبقى %(count)s مقاعد في خطتك."
 msgstr[4] "يتبقى %(count)s مقعدًا في خطتك."
 msgstr[5] "يتبقى %(count)s مقعد في خطتك."
 
-#: teams/views.py:36
+#: teams/views.py:38
 #, python-format
 msgid "Signed in as %(name)s"
 msgstr "تم تسجيل الدخول باسم %(name)s"
